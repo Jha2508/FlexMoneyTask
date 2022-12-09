@@ -3,16 +3,24 @@
 ## Tech stack used
 This assignment has simply used reactJS, CSS, Bootstrap, Javascript, Firebase Database- Firestore and for hosting , the firebase hosting has been taken into consideration.The screenshots for the website's Desktop and mobile view have been attached with this repository itself. Please find the screenshots below:
 ## Screenshots
-![Image Link] (https://github.com/Jha2508/FlexMoneyTask/blob/main/src/Screenshots/FlexMoneyTask1.png)
 
-![Image Link] (https://github.com/Jha2508/FlexMoneyTask/blob/main/src/Screenshots/FlexMoneyTask2.png)
+<hr>
+<img src='Screenshots/FlexMoneyTask1.png'>
+<img src='Screenshots/FlexMoneyTask2.png'>
 
-![Image Link] (https://github.com/Jha2508/FlexMoneyTask/blob/main/src/Screenshots/FlexMoneyTask3.png)
+<hr>
+<img src='Screenshots/FlexMoneyTask3.jpg'>
+<img src='Screenshots/FlexMoneyTask4.jpg'>
 
-![Image Link] (https://github.com/Jha2508/FlexMoneyTask/blob/main/src/Screenshots/FlexMoneyTask4.png)
+<hr>
+
+## ER Diagram
+<img src='Screenshots/FlexMoneyTask5.jpg'>
+
+<hr>
 
 
-
+## The hosting link for the website is  <a href=''>here</a>
 ## How to run this app
 
 In the project directory, you can run:
