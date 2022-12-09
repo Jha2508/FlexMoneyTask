@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import{AiFillMail} from 'react-icons/ai'
 
-import {validateEmail,loginExisting} from './functions.js'
+import {validateEmail,loginExisting} from '../Functions/functions.js'
 function RegisterUser() {
     const [batch, setbatch] = useState()
     const [email, setemail] = useState()
@@ -11,10 +12,10 @@ function RegisterUser() {
         var err=''
         
         
-        if(!validateEmail(email))err+='email is not defined\n'
+        if(!validateEmail(email))err+='email is not a valid one\n'
         if(batch===undefined)err+='batch is not valid\n'
 
-        if(err.length==0){
+        if(err.length===0){
             const date = new Date();
 
         // let day = date.getDate();
@@ -29,15 +30,15 @@ function RegisterUser() {
     }
   return (
     <>
-             <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">@</span>
+             <div className="i1 input-group mb-3">
+                <span className="input-group-text" id="basic-addon1"><AiFillMail/></span>
                 <input type="email" onChange={(e)=>setemail(e.target.value)} className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" />
             </div>
 
 
             <div className="input-group mb-3">
                 <span className="input-group-text" id="basic-addon1">Select the Batch</span>
-                <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">{batch==undefined?'No Batch Selected':batch}</button>
+                <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">{batch===undefined?'No Batch Selected':batch}</button>
                 <ul className="dropdown-menu dropdown-menu-end">
                     {
                         batches.map((id,val)=>{
@@ -60,7 +61,7 @@ function RegisterUser() {
                 </div>
                 <div className='col'>
                     <div>
-                        <button type="button" onClick={handleLogin} className="btn btn-outline-primary">Payment</button>
+                        <button type="button" onClick={handleLogin} className="btn btn-primary">Payment</button>
                     </div>
                 </div>
             </div>

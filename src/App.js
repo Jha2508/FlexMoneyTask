@@ -1,8 +1,8 @@
 
 import './App.css';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import NewUser from './NewUser';
-import RegisterUser from './RegisterUser';
+import NewUser from './Pages/NewUser';
+import RegisterUser from './Pages/RegisterUser';
 
 const App = () => {
   return (

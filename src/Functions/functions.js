@@ -3,8 +3,7 @@
 // Import the functions you need from the SDKs you need
 import { getDocs,collection, addDoc, query, where } from 'firebase/firestore'
 import 'firebase/firestore'
-import { db } from './firebaseconfig.js'
-import { useState } from 'react';
+import { db } from '../Firebase/firebaseconfig'
 
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -26,17 +25,23 @@ async function loginExisting(data){
     var uid=''
     querySnapshot.forEach((doc) => {
         // doc.data() is never undefined for query doc snapshots
-        flg = true;
+        flg = true
         uid=doc.id
         user=doc.data()
        // console.log(doc.id, " => ", doc.data());
     });
     if (flg) {
-       if(user.monthOfPayment==data[2] && user.yearOfPayment==data[3]) {
+       if(user.monthOfPayment===data[2] && user.yearOfPayment===data[3]) {
         alert('already registered for this month . Please note that you cant change your batch')
        }
        else{
-        
+        db.collection("Users").doc(uid).update({
+            monthOfPayment:data[2],
+            yearOfPayment:data[3]
+          }).then(function() {
+            alert('Registered for this month successfully!')
+            
+          });
        }
         // return false
 
@@ -86,7 +91,7 @@ async function sendData(data) {
 
 }
 function validateEmail(email) {
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if (email === undefined) return false;
     if (email.match(mailformat)) {
         return (true)
@@ -102,14 +107,14 @@ function validateName(name) {
 
     if (name.length > 150) return false;
     for (let i = 0; i < name.length; i++) {
-        if (!((name[i] >= 'a' && name[i] <= 'z') || (name[i] >= 'A' && name[i] <= 'Z'))) return false;
+        if (!((name[i] >= 'a' && name[i] <= 'z') || (name[i] >= 'A' && name[i] <= 'Z') ||(name[i]===' '))) return false;
     }
     return true;
 }
 
 function validatePhone(phone) {
     if (phone === undefined) return false;
-    if (phone.length != 10) return false;
+    if (phone.length !== 10) return false;
     for (let i = 0; i < phone.length; i++) {
         if (!(phone[i] >= '0' && phone[i] <= '9')) return false;
     }
