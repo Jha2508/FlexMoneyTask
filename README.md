@@ -1,7 +1,7 @@
 # FlexMoney Assignment for internship 2023
 
 ## Tech stack used
-This assignment has simply used reactJS, CSS, Bootstrap, Javascript, Firebase Database- Firestore and for hosting , the firebase hosting has been taken into consideration.The screenshots for the website's Desktop and mobile view have been attached with this repository itself. Please find the screenshots below:
+This assignment has simply used reactJS, CSS, Bootstrap, Javascript, Firebase Database- Firestore and for hosting , the  netlify has been taken into consideration.The screenshots for the website's Desktop and mobile view have been attached with this repository itself. Please find the screenshots below:
 ## Screenshots
 
 <hr>
