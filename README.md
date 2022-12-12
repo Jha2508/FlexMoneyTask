@@ -14,6 +14,11 @@ This assignment has simply used reactJS, CSS, Bootstrap, Javascript, Firebase Da
 
 <hr>
 
+
+## Database in Firestore console
+<img src='Screenshots/FlexMoneyTaskFirebase.png'>
+<hr>
+
 ## ER Diagram
 <img src='Screenshots/FlexMoneyTask5.jpg'>
 
